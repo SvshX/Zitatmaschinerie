@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/random_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize" >
+
+    <TextView
+        android:id="@+id/authorquote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/random_text2"
+        android:textSize="22sp" />
+   
+    <TextView
+        android:id="@+id/authorname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:textColor="#5298fc"
+        android:text="@string/random_text2"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/author_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/random_text2"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_furtherquotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/buttons"
+        android:onClick="onButtonClick"
+        android:text="@string/furtherquotes"
+        android:textAllCaps="true"
+        android:textColor="#5298fc"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_infoauthor"
+        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/buttons"
+        android:onClick="onButtonClick"
+        android:text="@string/infoauthor"
+        android:textSize="17sp"
+        android:textAllCaps="true"
+        android:textColor="#5298fc" />
+
+</LinearLayout>

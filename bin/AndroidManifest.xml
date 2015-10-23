@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.melcher.zitatmaschinerie"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <permission
+        android:name="com.melcher.zitatmaschinerie.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.melcher.zitatmaschinerie.permission.C2D_MESSAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/z_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.melcher.zitatmaschinerie.SplashScreen"
+            android:theme="@style/Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.CreateQuoteActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.MainActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.ShowQuotesActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.MainActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.SingleAuthorQuoteActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.AuthorQuotesSummaryActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.ShowQuotesActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.ShowQuotesActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.InfoAuthorActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.ShowQuotesActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.ShowQuotesActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.MyEntriesActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.MainActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.SingleQuoteActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.SingleExtraActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.RandomQuoteActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.ShowQuotesActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.ShowQuotesActivity" />
+        </activity>
+        <activity
+            android:name="com.melcher.zitatmaschinerie.QuoteOfTheDayActivity"
+            android:parentActivityName="com.melcher.zitatmaschinerie.MainActivity" 
+            android:label="@string/app_name" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.melcher.zitatmaschinerie.MainActivity" />
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.melcher.zitatmaschinerie" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

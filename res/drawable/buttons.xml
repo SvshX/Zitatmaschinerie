@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--    <item android:state_pressed="true" android:drawable="@drawable/button_pressed" />
+<item android:state_focused="true" android:drawable="@drawable/button_focused" />
+<item android:drawable="@drawable/ghost_button" />  -->
+
+
+<item android:state_focused="true"
+         android:state_pressed="true"
+         android:drawable="@drawable/ghost_button_focused"
+         android:color="@drawable/subtle_bluewhite" /> 
+<item android:state_focused="false" 
+         android:state_pressed="true" 
+         android:drawable="@drawable/ghost_button_focused"
+         android:color="@drawable/subtle_bluewhite" /> 
+<item android:drawable="@drawable/ghost_button"
+    android:color="@drawable/actionbar_bg" />
+
+</selector>

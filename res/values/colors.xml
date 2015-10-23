@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+ <drawable name="red_color">#c02764</drawable>
+ <drawable name="grey_color">#666666</drawable>
+ <drawable name="white_color">#ffffff</drawable>
+ <drawable name="actionbar_bg">#5298fc</drawable>
+ <drawable name="subtle_bluewhite">#f9ffff</drawable>
+ 
+</resources>

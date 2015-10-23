@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingTop="?android:attr/actionBarSize"
+        tools:ignore="MergeRootFrame" >
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/welcome"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#666666"
+            android:textSize="24sp" />
+
+        <!--
+            <TextView
+            android:id="@+id/explanation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:textStyle="normal"
+            android:text="@string/intro" />
+        -->
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/buttons"
+            android:onClick="onButtonClick"
+            android:text="@string/btn_show"
+            android:textAllCaps="true"
+            android:textColor="#5298fc"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/buttons"
+            android:onClick="onButtonClick"
+            android:text="@string/btn_create"
+            android:textAllCaps="true"
+            android:textColor="#5298fc"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_quoteoftheday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/buttons"
+            android:onClick="onButtonClick"
+            android:text="@string/day"
+            android:textAllCaps="true"
+            android:textColor="#5298fc"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_myList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/buttons"
+            android:onClick="onButtonClick"
+            android:text="@string/myList"
+            android:textAllCaps="true"
+            android:textColor="#5298fc"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</ScrollView>

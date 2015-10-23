@@ -1,0 +1,76 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+<LinearLayout 
+    android:id="@+id/day_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize" >
+
+    <TimePicker
+        android:id="@+id/tpicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <Switch
+        android:id="@+id/switch_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/day" />
+
+<LinearLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal" >
+
+    <Button
+        android:id="@+id/btn_back"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/buttons"
+        android:text="@string/back"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textColor="@drawable/buttons" />
+
+    <Button
+        android:id="@+id/btn_saveday"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/buttons"
+        android:text="@string/save_quote"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textColor="@drawable/buttons" />
+    
+</LinearLayout>
+</LinearLayout>
+
+<ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#fff"
+        android:choiceMode="singleChoice"
+        android:divider="#e3e3e3"
+        android:dividerHeight="0.1dp" />
+
+</android.support.v4.widget.DrawerLayout>
